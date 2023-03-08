@@ -1,0 +1,17 @@
+{
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    }
+  ],
+  "manifestName": "Customer",
+  "explanation": "This is the base model for the Customer manifest",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Asset",
+      "entityPath": "Asset.cdm.json/Asset"
+    }
+  ]
+}

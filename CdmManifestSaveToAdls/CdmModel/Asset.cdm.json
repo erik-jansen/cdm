@@ -1,0 +1,47 @@
+{
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Asset",
+      "extendsEntity": "CdmEntity",
+      "displayName": "Asset",
+      "description": "An economic resource that is expected to provide benefits to the business organization. Anything having commercial or exchange value that is owned by a business, institution, or individual. Property used in the conduct of a trade or business, such as business machinery and office furniture. Assets have three primary characteristics: (1)  The asset will provide anticipated or probable future benefits (2)  The business organization controls the asset (3)  The asset results from a prior event or financial transaction. Assets are normally divided into 4 categories: 1 - CURRENT ASSETS, 2 - INVESTMENTS, 3 - PROPERTY, PLANT AND EQUIPMENT, 4 - INTANGIBLE ASSETS. Assets are expressed in money or are convertible into money and may include deferred charges that are not resources, such as deferred costs. Assets can be recognized and measured in conformity with Generally Accepted Accounting Principles (GAAP). An Asset may be tangible or intangible. Tangible Assets have physical substance. Intangible Assets lack physical substance and result from a right granted by the government or another company such as goodwill or a patent. An asset may be current or noncurrent. Current assets have a life of one year or less. Noncurrent assets have a life in excess of one year.",
+      "hasAttributes": [
+        {
+          "purpose": "identifiedBy",
+          "name": "AssetId",
+          "dataType": "bigInteger",
+          "dataFormat": "Int64",
+          "description": "The unique identifier of an Asset.",
+          "appliedTraits": [
+            {
+              "traitReference": "is.required"
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "name": "AssetName",
+          "dataType": "string",
+          "dataFormat": "String",
+          "isNullable": true,
+          "description": "The name of the Asset."
+        },
+        {
+          "purpose": "hasA",
+          "name": "OrganizationAssignedSerialNumber",
+          "dataType": "string",
+          "dataFormat": "String",
+          "isNullable": true,
+          "description": "The serial number assigned to the Asset by the organization holding it."
+        }
+      ]
+    }
+  ],
+  "documentVersion": "1.0"
+}
