@@ -1,0 +1,63 @@
+{
+  "jsonSchemaSemanticVersion": "1.0.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Item",
+      "extendsEntity": "CdmEntity",
+      "displayName": "Item",
+      "description": "Something that is inventoried. A SKU, Stock keeping unit, refers to a specific item in a specific unit of measure. For example, if you distributed a specific chemical in both gallon containers and barrels then you would maintain the inventory as two SKUs even though they are both the same specific chemical. Items are classified as follows: - Tool - Product - Raw Material - Kit - Replacement Part - Unit - Miscellaneous Item",
+      "hasAttributes": [
+        {
+          "purpose": "identifiedBy",
+          "name": "ItemSku",
+          "dataType": "string",
+          "dataFormat": "String",
+          "description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+          "appliedTraits": [
+            {
+              "traitReference": "is.required"
+            }
+          ]
+        },
+        {
+          "purpose": "hasA",
+          "name": "ItemName",
+          "dataType": "string",
+          "dataFormat": "String",
+          "isNullable": true,
+          "description": "The name of the Item."
+        },
+        {
+          "purpose": "hasA",
+          "name": "ProductId",
+          "dataType": "bigInteger",
+          "dataFormat": "Int64",
+          "isNullable": true,
+          "description": "The unique identifier of a Product."
+        },
+        {
+          "purpose": "hasA",
+          "name": "EuropeanArticleNumber",
+          "dataType": "decimal",
+          "dataFormat": "Decimal",
+          "isNullable": true,
+          "description": "A 13 digit barcoding standard which is a superset of the original 12-digit Universal Product Code (UPC). AKA International Article Number (abbreviation of EAN retained)"
+        },
+        {
+          "purpose": "hasA",
+          "name": "ExternalItemId",
+          "dataType": "bigInteger",
+          "dataFormat": "Int64",
+          "isNullable": false,
+          "description": "An external ID given to a product under development."
+        }
+      ]
+    }
+  ],
+  "documentVersion": "1.0"
+}

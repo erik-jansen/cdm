@@ -12,6 +12,11 @@
       "type": "LocalEntity",
       "entityName": "Asset",
       "entityPath": "Asset.cdm.json/Asset"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Item",
+      "entityPath": "Item.cdm.json/Item"
     }
   ]
 }

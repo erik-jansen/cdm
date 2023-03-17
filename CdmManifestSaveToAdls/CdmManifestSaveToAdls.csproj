@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Identity" Version="1.8.2" />
+    <PackageReference Include="Azure.Security.KeyVault.Certificates" Version="4.5.0" />
     <PackageReference Include="Microsoft.CommonDataModel.ObjectModel" Version="1.7.0" />
     <PackageReference Include="Microsoft.CommonDataModel.ObjectModel.Adapter.Adls" Version="1.7.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
@@ -21,6 +23,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="CdmModel\foundations.cdm.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="CdmModel\Item.cdm.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="CdmModel\meanings.calendar.cdm.json">
